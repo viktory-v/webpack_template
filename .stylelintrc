@@ -1,0 +1,9 @@
+{
+  "extends": [
+    "stylelint-config-recommended",
+    "stylelint-config-airbnb"
+  ],
+  "plugins": [
+    "stylelint-scss"
+  ]
+}
