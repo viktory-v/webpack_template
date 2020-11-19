@@ -1,0 +1,26 @@
+.nav {
+    &__list {
+        display: flex;
+        width: 580px;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+    }
+    &__item {
+        position: relative;
+
+    }
+    &__item--active::before {
+        content: "";
+        width: 99px;
+        height: 5px;
+        background-color: #30419A;
+        position: absolute;
+        top: 56px;
+        transform: translate(-50%, -50%);
+        left: 50%;
+    }
+    &__link {
+        color: #202020;
+    }
+}
