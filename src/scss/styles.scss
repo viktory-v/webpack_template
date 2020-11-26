@@ -1,0 +1,24 @@
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1170px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+ul[class] {
+    list-style: none;
+}
+
+a[class] {
+    text-decoration: none;
+}
+
+@import 'header';
+@import 'main-nav';
