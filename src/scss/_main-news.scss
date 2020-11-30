@@ -1,0 +1,45 @@
+.main-news {
+    padding-top: 166px;
+    background-image: url(../images/background-color.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    padding-bottom: 132px;
+    &__title {
+        font-family: 'RobotoBold';
+        font-size: 54px;
+        line-height: 63px;
+        text-align: center;
+        color: #FFFFFF;
+    }
+    &__text {
+        position: relative;
+        padding-top: 20px;
+        font-family: 'RobotoRegular';
+        font-size: 24px;
+        line-height: 140%;
+        text-align: center;
+        color: #FFFFFF;
+        margin-top: 20px;
+        max-width: 727px;
+        margin: 0 auto;
+        &_blue {
+            color: #61BED9;
+            font-weight: 700;
+        }
+        &::before {
+            content: '';
+            width: 40px;
+            height: 4px;
+            background-color: #40A43D;
+            border-radius: 4px;
+            position: absolute;
+            top: 142px;
+            transform: translate(-50%, -50%);
+            left: 50%;
+        }
+    }
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
