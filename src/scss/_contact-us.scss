@@ -1,40 +1,32 @@
-.management {
+.contact-us {
     position: relative;
     &__container {
         display: flex;
-        margin-top: 80px;
+        margin-top: 63px;
     }
-    &__right {
-        max-width: 630px;
-        margin-left: 70px;
+    &__left {
+        max-width: 574px;
     }
     &__title {
         font-family: 'RobotoBold';
         font-size: 34px;
         line-height: 40px;
         color: #141414;
-        margin-bottom: 5px;
     }
     &__text {
+        width: 491px;
+        margin-top: 30px;
         font-family: 'RobotoRegular';
-        font-size: 16px;
+        font-weight: normal;
+        font-size: 18px;
         line-height: 140%;
         color: #343434;
-        padding-top: 20px;
-    }
-    &__list {
-        margin-top: 30px; 
-    }
-    &__item {
-        font-family: 'RobotoRegular';
-        font-size: 18px;
-        line-height: 180%;
-        color: #343434;
-        list-style-type: square;
-        margin-left: 20px;
     }
     &__button {
-        margin-top: 30px;
+        margin-top: 40px;
+    }
+    &__right {
+        margin-left: 141px;
     }
     &__image {
         width: 455px;
@@ -46,7 +38,8 @@
         width: 320px;
         height: 320px;
         position: absolute;
-        right: 10px;
-        bottom: -126px;
+        top: 309px;
+        left: 754px;
+        z-index: -1;
     }
 }
