@@ -22,3 +22,7 @@ import './scss/styles.scss'
 // import './fonts/Roboto-Regular.svg'
 // import './fonts/Roboto-Regular.ttf'
 // import './fonts/Roboto-Regular.woff'
+
+// if (process.env.NODE_ENV !== 'production') {
+//     require('file-loader!./index.html')
+// }

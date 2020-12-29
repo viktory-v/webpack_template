@@ -2,6 +2,9 @@ const path = require('path')
 const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const { CleanWebpackPlugin } = require('clean-webpack-plugin')
+const CopyWebpackPlugin = require('copy-webpack-plugin')
+const chokidar = require('chokidar')
 
 const devMode = process.argv.includes('development')
 
@@ -15,7 +18,14 @@ module.exports = {
   },
 
   devServer: {
-    historyApiFallback: true,
+    before(app, server) {
+      chokidar.watch([
+        './src/*.html',
+        './src/scss/*.scss'
+      ]).on('all', function() {
+        server.sockWrite(server.sockets, 'content-changed');
+      })
+    },
     contentBase: path.resolve(__dirname, './dist'),
     open: true,
     compress: true,
@@ -29,7 +39,13 @@ module.exports = {
         test: /\.s[ac]ss$/,
         use: [
           devMode ? 'style-loader' : MiniCssExtractPlugin.loader,
-          'css-loader',
+          {
+            loader: 'css-loader',
+            options: {
+              url: false 
+            }
+
+          },
           {
             loader: 'postcss-loader',
             options: {
@@ -56,19 +72,18 @@ module.exports = {
           }
         }
       },
-      {
-        test: /\.(png|svg|jpg|jpeg|gif)$/,
-        type: 'asset/resource',
-        generator: {
-          filename: 'images/[name][ext]'
-        }
-      },
+      
       {
         test: /\.(woff(2)?|eot|ttf|otf)$/,
-        type: 'asset/resource',
-        generator: {
-          filename: 'fonts/[hash][ext]'
-        }
+        use: [
+          {
+              loader: 'file-loader',
+              options: {
+
+                outputPath: 'fonts/'
+              }
+          }
+        ]
       }
     ]
   },
@@ -78,7 +93,18 @@ module.exports = {
       template: './src/index.html'
     }),
     new MiniCssExtractPlugin({
-      filename: '[hash].css'
+      filename: '[name].css'
+    }),
+    new CleanWebpackPlugin(),
+	  new CopyWebpackPlugin({
+      patterns: [
+        {
+          from: 'src/images', to: 'images'
+        },
+        {
+          from: 'src/fonts', to: 'fonts'
+        }
+      ]
     })
   ]
 }

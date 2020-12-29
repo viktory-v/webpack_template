@@ -4,11 +4,10 @@
         display: flex;
         margin-top: 63px;
     }
-    &__left {
+    &__content {
         max-width: 574px;
     }
     &__title {
-        font-family: 'RobotoBold';
         font-size: 34px;
         line-height: 40px;
         color: #141414;
@@ -16,7 +15,6 @@
     &__text {
         width: 491px;
         margin-top: 30px;
-        font-family: 'RobotoRegular';
         font-weight: normal;
         font-size: 18px;
         line-height: 140%;
