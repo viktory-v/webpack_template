@@ -1,9 +1,14 @@
+body {
+    font-family: Roboto;
+    font-weight: 400;
+}
+
 .hero {
     &__container {
         margin-top: 70px;
         display: flex;
     }
-    &__right {
+    &__photo {
         width: 570px;
         position: relative;
         margin-left: 54px;
@@ -14,6 +19,7 @@
             top: 0;
             right: 0;
             z-index: 3;
+            background-size: 460px 460px;
         }
         &_bottom {
             top: 318px;
@@ -24,21 +30,22 @@
             top: 218px;
             right: 165px;
             z-index: 2;
+            width: 372px; 
+            height: 320px;
         }
     }
-    &__left {
+    &__content {
         margin-top: 20px;
         max-width: 547px;
     }
     &__title {
-        font-family: 'RobotoBold';
+        font-weight: 700;
         font-size: 74px;
         line-height: 100%;
         color: #313131;
         text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     }
     &__text {
-        font-family: 'RobotoRegular';
         font-size: 24px;
         line-height: 140%;
         color: #141414;
@@ -47,7 +54,6 @@
     &__button {
         margin-top: 30px;
         display: block;
-        border: 1px solid #000000;
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     }
     &__link {
@@ -59,7 +65,6 @@
         }
         &_text {
             color: #343434;
-            font-family: 'RobotoRegular';
             font-size: 18px;
             line-height: 180%;
         }

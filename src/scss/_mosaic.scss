@@ -4,7 +4,7 @@
     &__title {
         padding-top: 50px;
         margin-left: 60px;
-        font-family: 'RobotoBold';
+        font-weight: 700;
         font-size: 34px;
         line-height: 40px;  
         color: #141414;
@@ -13,7 +13,6 @@
         margin-left: 60px;
         margin-top: 20px;
         max-width: 491px;
-        font-family: 'RobotoRegular';
         font-size: 18px;
         line-height: 140%;
         color: #343434;
@@ -23,7 +22,6 @@
         top: 45px;
         width: 569px;
         height: 470px;
-        // left: 601px;
         right: 135px;
     }
     &__backgroud-color {
@@ -32,14 +30,13 @@
         width: 799px;
     }
     &__vertical-text {
-        font-family: 'RobotoRegular';
+        font-weight: 300;
+        font-size: 23px;
         transform: rotate(-90deg);
         position: absolute;
         left: 52px;
         top: 275px;
         text-transform: uppercase;
-        font-weight: 300;
-        font-size: 20px;
         line-height: 23px;
         letter-spacing: 0.2em;
         color: #05060E;

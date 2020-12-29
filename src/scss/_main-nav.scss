@@ -1,14 +1,13 @@
 .nav {
+    width: 580px;
     &__list {
         display: flex;
-        width: 580px;
         justify-content: space-between;
         align-items: center;
         position: relative;
     }
     &__item {
         position: relative;
-
     }
     &__item--active::before {
         content: "";
@@ -22,5 +21,12 @@
     }
     &__link {
         color: #202020;
+        &--white {
+            color: #ffffff;
+        }
+        &--big {
+            text-transform: uppercase;
+            font-weight: 500;
+        }
     }
 }

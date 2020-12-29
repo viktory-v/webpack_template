@@ -4,19 +4,18 @@
         display: flex;
         margin-top: 80px;
     }
-    &__right {
+    &__photo {
         max-width: 630px;
         margin-left: 70px;
     }
     &__title {
-        font-family: 'RobotoBold';
+        font-weight: 700;
         font-size: 34px;
         line-height: 40px;
         color: #141414;
         margin-bottom: 5px;
     }
     &__text {
-        font-family: 'RobotoRegular';
         font-size: 16px;
         line-height: 140%;
         color: #343434;
@@ -26,7 +25,6 @@
         margin-top: 30px; 
     }
     &__item {
-        font-family: 'RobotoRegular';
         font-size: 18px;
         line-height: 180%;
         color: #343434;

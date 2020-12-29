@@ -1,11 +1,9 @@
 .main-news {
     padding-top: 166px;
-    background-image: url(../images/background-color.png);
-    background-repeat: no-repeat;
-    background-size: 100%;
+    background: url(../images/background-color.png) no-repeat 100%;
     padding-bottom: 132px;
     &__title {
-        font-family: 'RobotoBold';
+        font-weight: 700;
         font-size: 54px;
         line-height: 63px;
         text-align: center;
@@ -14,7 +12,6 @@
     &__text {
         position: relative;
         padding-top: 20px;
-        font-family: 'RobotoRegular';
         font-size: 24px;
         line-height: 140%;
         text-align: center;
