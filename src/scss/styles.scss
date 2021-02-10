@@ -7,9 +7,11 @@
 }
 
 .container {
-    max-width: 1170px;
+    max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
 ul[class] {
@@ -34,3 +36,4 @@ a[class] {
 @import 'our-blog';
 @import 'item-blog';
 @import 'footer';
+@import 'media';
