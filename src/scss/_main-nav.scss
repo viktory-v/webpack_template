@@ -1,24 +1,29 @@
 .nav {
     width: 580px;
+    font-size: 18px;
+    line-height: 140%;
     &__list {
         display: flex;
         justify-content: space-between;
-        align-items: center;
         position: relative;
     }
     &__item {
         position: relative;
     }
-    &__item--active::before {
-        content: "";
-        width: 99px;
-        height: 5px;
-        background-color: #30419A;
-        position: absolute;
-        top: 56px;
-        transform: translate(-50%, -50%);
-        left: 50%;
+    &__item--active {
+        margin-right: 27px;
+        &::before {
+            content: "";
+            width: 99px;
+            height: 5px;
+            background-color: #30419A;
+            position: absolute;
+            top: 50px;
+            transform: translate(-50%, -50%);
+            left: 50%;
+        }
     }
+
     &__link {
         color: #202020;
         &--white {
