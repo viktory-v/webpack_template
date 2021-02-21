@@ -1,6 +1,16 @@
 .mosaic {
-    margin-top: 76px;
+    margin-top: 9px;
     position: relative;
+    &__container {
+        display: flex;
+        justify-content: space-between;
+
+        @media(max-width: 1150px){
+            margin-top: 0;
+            flex-wrap: wrap;    
+        }
+    }
+
     &__title {
         padding-top: 50px;
         margin-left: 60px;
@@ -8,37 +18,84 @@
         font-size: 34px;
         line-height: 40px;  
         color: #141414;
+
+        @media(max-width: 1100px) {
+            margin-left: -30px;
+        }
     }
     &__text {
         margin-left: 60px;
-        margin-top: 20px;
+        margin-top: 22px;
         max-width: 491px;
         font-size: 18px;
         line-height: 140%;
         color: #343434;
+
+        @media(max-width: 1100px) {
+            margin-left: 0;
+        }
     }
+
+    &__photo {
+        width: 100%;
+        max-width: 569px;
+        &::after {
+            content: "";
+            display: block;
+            height: 0;
+        }
+        @media(max-width: 1100px) {
+            margin: 0 auto;
+        }  
+    }
+
     &__img {
-        position: absolute;
-        top: 45px;
-        width: 569px;
-        height: 470px;
-        right: 135px;
+        padding-top: 49px;
+        height: auto;
+        max-width: 569px;
+        padding-top: 48px;
+        height: auto;
     }
-    &__backgroud-color {
+    &__content {
         padding-bottom: 60px;
-        background-color: #F6F9FC;
-        width: 799px;
+        &::after {
+            content: "";
+            display: block;
+            background-color: #F6F9FC;
+            width: 799px;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            z-index: -1;
+
+            @media(max-width: 1100px) {
+                height: 53%;
+            }
+        }
+
+        @media(max-width: 1100px) {
+            padding-bottom: 0;
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+            min-width: 100%;
+            width: 100%;
+        }
     }
     &__vertical-text {
+        left: 3%;
         font-weight: 300;
-        font-size: 23px;
+        font-size: 20px;
         transform: rotate(-90deg);
         position: absolute;
-        left: 52px;
-        top: 275px;
+        top: 48%;
         text-transform: uppercase;
         line-height: 23px;
         letter-spacing: 0.2em;
         color: #05060E;
+
+        @media(max-width: 1400px) {
+            display: none;
+        }
     }
 }

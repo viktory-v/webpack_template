@@ -1,15 +1,15 @@
 .header {
     box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.25);
+
     &__container {
         display: flex;
     }
     &__logo {
         margin-top: 12px;
-        margin-bottom: 11px;
-        margin-right: 78px;
+        margin-right: 97px;
+        margin-bottom: 4px;
     }
     &__nav {
-        margin-top: 28px;
-        margin-bottom: 28px;
+        margin-top: 27px;
     }
 }
