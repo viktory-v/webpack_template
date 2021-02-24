@@ -2,42 +2,74 @@
     position: relative;
     &__container {
         display: flex;
-        margin-top: 63px;
+        margin-top: 100px;
+        justify-content: space-between;
+
+        @media(max-width: 1100px) {
+            margin-top: 0px;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
     }
     &__content {
         max-width: 574px;
     }
     &__title {
+        margin-top: 23px;
         font-size: 34px;
         line-height: 40px;
         color: #141414;
+
+        @media(max-width: 1100px) {
+            font-size: 30px;
+        }
     }
     &__text {
         width: 491px;
-        margin-top: 30px;
+        margin-top: 29px;
         font-weight: normal;
         font-size: 18px;
         line-height: 140%;
         color: #343434;
     }
     &__button {
-        margin-top: 40px;
+        margin-top: 37px;
     }
     &__right {
         margin-left: 141px;
     }
+    &__photo {
+        margin-top: 30px;
+    }
     &__image {
-        width: 455px;
-        height: 534px;
+        // width: 455px;
+        // height: 534px;
+        width: 100%;
+        height: auto;
     }
     &::before {
+        // content: "";
+        // background-image: url(../images/dots.png);
+        // width: 320px;
+        // height: 320px;
+        // position: absolute;
+        // top: 309px;
+        // left: 754px;
+        // z-index: -1;
         content: "";
         background-image: url(../images/dots.png);
         width: 320px;
-        height: 320px;
+        height: 59.8%;
         position: absolute;
-        top: 309px;
-        left: 754px;
+        top: 57.8%;
+        left: 52.5%;
         z-index: -1;
+
+        @media(max-width: 1100px) {
+            height: 28.8%;
+            top: 78.8%;
+            left: 20.5%;
+        }
     }
 }
