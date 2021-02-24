@@ -7,14 +7,25 @@
     }
     &:nth-child(3),
     &:nth-child(4) {
-        margin-top: 124px;
+        margin-top: 77px;
     }
     &__text {
-        margin-top: 30px;
+        margin-top: 26px;
         width: 440px;
         font-size: 16px;
         line-height: 140%;
         color: #FFFFFF;
+        // &:last-child {
+        //     margin-top: 30px;
+        // }
+        &--margin-botton {
+            margin-bottom: 30px;
+            margin-top: 26px;
+            width: 440px;
+            font-size: 16px;
+            line-height: 140%;
+            color: #FFFFFF;
+        }
     }
     &__title {
         margin-top: 20px;
