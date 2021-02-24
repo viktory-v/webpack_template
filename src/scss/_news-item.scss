@@ -4,6 +4,10 @@
     margin-top: 79px;
     &:nth-child(odd) {
         margin-right: 80px;
+
+        @media(max-width: 1200px) {
+            margin-right: 0px;
+        }
     }
     &:nth-child(3),
     &:nth-child(4) {
